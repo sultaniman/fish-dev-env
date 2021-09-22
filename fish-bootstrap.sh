@@ -28,3 +28,15 @@ funcsave l
 
 alias gg="git log --oneline --graph"
 funcsave gg
+
+alias po="git pull origin (git branch --show-current)"
+funcsave po
+
+alias pb="git push origin (git branch --show-current)"
+funcsave pb
+
+alias gc="git branch --show-current | pbcopy; git checkout master; git branch -D (pbpaste); po"
+funcsave gc
+
+alias grr="git add .; git commit --amend --no-edit"
+funcsave grr
