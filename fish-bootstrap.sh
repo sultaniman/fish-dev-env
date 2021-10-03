@@ -7,19 +7,18 @@ echo ". (pyenv init - | psub)" >> ~/.config/fish/conf.d/omf.fish
 # Install env, themes and plugins
 omf install https://github.com/jhillyerd/plugin-git
 omf install nvm
-omf install clearance
+omf install chain
 
 # Install python using pyenv
 set LDFLAGS "-L/usr/local/opt/openssl/lib"
 set CPPFLAGS "-I/usr/local/opt/openssl/include"
 set CFLAGS "-I/usr/local/opt/openssl/include"
-pyenv install -v 3.6.7
-#pyenv install -v 3.7.1
+pyenv install -v 3.9.7
 
 # Install nvm
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 echo "set -gx NVM_DIR \$HOME/.nvm" >> ~/.config/fish/conf.d/omf.fish
-nvm install 10.12.0
+nvm install 16.10.0
 npm i yarn npm -g
 
 # Configure alias funcitons
