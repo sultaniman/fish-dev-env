@@ -40,3 +40,6 @@ funcsave gc
 
 alias grr="git add .; git commit --amend --no-edit"
 funcsave grr
+
+alias sloc="git diff --shortstat (git hash-object -t tree /dev/null)"
+funcsave sloc
