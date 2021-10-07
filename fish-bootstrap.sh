@@ -13,7 +13,8 @@ omf install chain
 set LDFLAGS "-L/usr/local/opt/openssl/lib"
 set CPPFLAGS "-I/usr/local/opt/openssl/include"
 set CFLAGS "-I/usr/local/opt/openssl/include"
-pyenv install -v 3.9.7
+
+pyenv install -v 3.10
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
@@ -21,7 +22,7 @@ echo "set -gx NVM_DIR \$HOME/.nvm" >> ~/.config/fish/conf.d/omf.fish
 nvm install 16.10.0
 npm i yarn npm -g
 
-# Configure alias funcitons
+# Configure aliases
 alias l='ls -hal'
 funcsave l
 
@@ -42,3 +43,7 @@ funcsave grr
 
 alias sloc="git diff --shortstat (git hash-object -t tree /dev/null)"
 funcsave sloc
+
+# Configure bin paths
+fish_add_path $HOME/bin
+fish_add_path $HOME/go/bin/
